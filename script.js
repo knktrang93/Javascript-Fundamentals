@@ -85,23 +85,23 @@
 
 // JavaScript Fundamentals – Part 2 Coding Challenge #1 Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently. Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team). A team only wins if it has at least double the average score of the other team. Otherwise, no team wins! Your tasks: 1. Createanarrowfunction'calcAverage'tocalculatetheaverageof3scores 2. Usethefunctiontocalculatetheaverageforbothteams 3. Createafunction'checkWinner'thattakestheaveragescoreofeachteam as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)" 4. Usethe'checkWinner'functiontodeterminethewinnerforbothData1and Data 2 5. Ignoredrawsthistime Test data: § Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49 § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27 Hints: § To calculate average of 3 values, add them all together and divide by 3 § To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉
 
-function calcAverage(score1, score2, score3) {
-  return (score1 + score2 + score3) / 3;
-}
-const averageKoalas = calcAverage(23, 34, 27);
-const averageDolphins = calcAverage(85, 54, 41);
-console.log(averageKoalas, averageDolphins);
+// function calcAverage(score1, score2, score3) {
+//   return (score1 + score2 + score3) / 3;
+// }
+// const averageKoalas = calcAverage(23, 34, 27);
+// const averageDolphins = calcAverage(85, 54, 41);
+// console.log(averageKoalas, averageDolphins);
 
-function checkWinner(averageDolphins, averageKoalas) {
-  if (averageDolphins >= 2 * averageKoalas) {
-    console.log(`Team Dolphins win!(${averageDolphins} vs ${averageKoalas})`);
-  } else if (averageKoalas >= 2 * averageDolphins) {
-    console.log(`Team Koalas win!(${averageKoalas} vs ${averageDolphins})`);
-  } else {
-    console.log("No team wins!");
-  }
-}
-checkWinner(averageDolphins, averageKoalas);
+// function checkWinner(averageDolphins, averageKoalas) {
+//   if (averageDolphins >= 2 * averageKoalas) {
+//     console.log(`Team Dolphins win!(${averageDolphins} vs ${averageKoalas})`);
+//   } else if (averageKoalas >= 2 * averageDolphins) {
+//     console.log(`Team Koalas win!(${averageKoalas} vs ${averageDolphins})`);
+//   } else {
+//     console.log("No team wins!");
+//   }
+// }
+// checkWinner(averageDolphins, averageKoalas);
 
 // Coding Challenge #2
 // Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
@@ -112,14 +112,47 @@ checkWinner(averageDolphins, averageKoalas);
 // 4. Bonus:Createanarray'total'containingthetotalvalues,sothebill+tip Test data: 125, 555 and 44
 // Hint: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
 
-function calcTip(bill) {
-  return bill >=50 && bill <=100 ? bill *0.15:bill*0.2;
-const tip = calcTip(100);
-console.log(tip);
+// function calcTip(bill) {
+//   return bill >=50 && bill <=100 ? bill *0.15:bill*0.2;
+// const tip = calcTip(100);
+// console.log(tip);
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(tips);
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(tips);
 
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-console.log(total);
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// console.log(total);z
+
+// course challenges
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Brother",
+//   birthYear: 1991,
+//   job: "teacher",
+//   friends: ["Mike", "Peter", "Steven"],
+//   hasDriversLiscense: false,
+
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
+
+//   liscenseSentence: function () {
+//     if (this.hasDriversLiscense === true) {
+//       return "he has a driver liscense";
+//     } else {
+//       return "he doesn't have a driver liscense";
+//     }
+//   },
+// };
+
+// console.log(jonas.calcAge());
+// console.log(jonas.age);
+// console.log(jonas.liscenseSentence());
+
+// console.log(
+//   `${jonas.firstName} is a ${jonas.age}-year old ${
+//     jonas.job
+//   }, and ${jonas.liscenseSentence()}. `
+// );
