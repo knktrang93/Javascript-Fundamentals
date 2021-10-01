@@ -9,23 +9,23 @@
 //     1. Print a nice output to the console,saying who has the higher BMI.The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
 //     2. Use a template literal to include the BMI values in the outputs.Example:"Mark's BMI (28.3) is higher than John's (23.9)!"
 //     Hint: Use an if/else statement 😉 -->
-let massOfMark = 78;
-let heightOfMark = 1.69;
-let massOfJohn = 80;
-let heightOfJohn = 1.63;
+// let massOfMark = 78;
+// let heightOfMark = 1.69;
+// let massOfJohn = 80;
+// let heightOfJohn = 1.63;
 
-let markBMI = massOfMark / heightOfMark ** 2;
-console.log(markBMI);
-let johnBMI = massOfJohn / heightOfJohn ** 2;
-console.log(johnBMI);
-let markHigherBMI = markBMI > johnBMI;
-console.log(markHigherBMI);
+// let markBMI = massOfMark / heightOfMark ** 2;
+// console.log(markBMI);
+// let johnBMI = massOfJohn / heightOfJohn ** 2;
+// console.log(johnBMI);
+// let markHigherBMI = markBMI > johnBMI;
+// console.log(markHigherBMI);
 
-if (markHigherBMI) {
-  console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
-} else {
-  console.log(`John's BMI (${johnBMI}) is higher than Marks's (${markBMI})!`);
-}
+// if (markHigherBMI) {
+//   console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+// } else {
+//   console.log(`John's BMI (${johnBMI}) is higher than Marks's (${markBMI})!`);
+// }
 
 //     <!-- Coding Challenge #3
 // There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
@@ -41,20 +41,20 @@ if (markHigherBMI) {
 // § Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
 // § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106 -->
 
-const averageDolphins = (97 + 150 + 76) / 3;
-const averageKoalas = (109 + 80 + 40) / 3;
-console.log(averageDolphins, averageKoalas);
-if (averageDolphins > averageKoalas && averageDolphins >= 100) {
-  console.log("Team Dolphins win!");
-} else if (averageKoalas > averageDolphins && averageKoalas >= 100) {
-  console.log("Team Koalas win!");
-} else if (
-  (averageDolphins == averageKoalas && averageDolphins, averageKoalas >= 100)
-) {
-  console.log("It's a draw!");
-} else {
-  console.log("No one wins");
-}
+// const averageDolphins = (97 + 150 + 76) / 3;
+// const averageKoalas = (109 + 80 + 40) / 3;
+// console.log(averageDolphins, averageKoalas);
+// if (averageDolphins > averageKoalas && averageDolphins >= 100) {
+//   console.log("Team Dolphins win!");
+// } else if (averageKoalas > averageDolphins && averageKoalas >= 100) {
+//   console.log("Team Koalas win!");
+// } else if (
+//   (averageDolphins == averageKoalas && averageDolphins, averageKoalas >= 100)
+// ) {
+//   console.log("It's a draw!");
+// } else {
+//   console.log("No one wins");
+// }
 
 // Coding Challenge #4
 // Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
@@ -78,7 +78,28 @@ if (averageDolphins > averageKoalas && averageDolphins >= 100) {
 //   `The bill was ${bill}, the tip was ${tip}, and the total value was ${total}`
 // );
 // ternary operator
-const bill = 275;
-let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-let total = bill + tip;
-console.log(`bill was ${bill}, tip was ${tip}, total was ${total}`);
+// const bill = 275;
+// let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// let total = bill + tip;
+// console.log(`bill was ${bill}, tip was ${tip}, total was ${total}`);
+
+// JavaScript Fundamentals – Part 2 Coding Challenge #1 Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently. Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team). A team only wins if it has at least double the average score of the other team. Otherwise, no team wins! Your tasks: 1. Createanarrowfunction'calcAverage'tocalculatetheaverageof3scores 2. Usethefunctiontocalculatetheaverageforbothteams 3. Createafunction'checkWinner'thattakestheaveragescoreofeachteam as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)" 4. Usethe'checkWinner'functiontodeterminethewinnerforbothData1and Data 2 5. Ignoredrawsthistime Test data: § Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49 § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27 Hints: § To calculate average of 3 values, add them all together and divide by 3 § To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉
+
+function calcAverage(score1, score2, score3) {
+  return (score1 + score2 + score3) / 3;
+}
+const averageKoalas = calcAverage(23, 34, 27);
+const averageDolphins = calcAverage(85, 54, 41);
+console.log(averageKoalas, averageDolphins);
+
+function checkWinner(averageDolphins, averageKoalas) {
+  if (averageDolphins >= 2 * averageKoalas) {
+    console.log(`Team Dolphins win!(${averageDolphins} vs ${averageKoalas})`);
+  } else if (averageKoalas >= 2 * averageDolphins) {
+    console.log(`Team Koalas win!(${averageKoalas} vs ${averageDolphins})`);
+  } else {
+    console.log("No team wins!");
+  }
+}
+checkWinner(averageDolphins, averageKoalas);
+checkWinner(200, 150);
