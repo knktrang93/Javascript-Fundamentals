@@ -199,6 +199,7 @@
 //   : console.log(
 //       `${john.firstName}'s BMI(${john.computedBMI}) is higher than ${mark.firstName}'s (${mark.computedBMI}).`
 //     );
+
 // Coding Challenge #4
 // Let's improve Steven's tip calculator even more, this time using loops!
 // Your tasks:
@@ -214,29 +215,56 @@
 // 4.3. Call the function with the 'totals' array
 // GOOD LUCK 😀
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 100 ? bill * 0.15 : bill * 0.2;
-};
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 100 ? bill * 0.15 : bill * 0.2;
+// };
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
 
-for (let i = 0; i < bills.length; i++) {
-  const tip = calcTip(bills[i]);
-  tips.push(tip);
-  totals.push(bills[i] + tip);
-}
-console.log(tips);
-console.log(totals);
+// for (let i = 0; i < bills.length; i++) {
+//   const tip = calcTip(bills[i]);
+//   tips.push(tip);
+//   totals.push(bills[i] + tip);
+// }
+// console.log(tips);
+// console.log(totals);
 
-const caclAverage = function (arr) {
-  let sum = 0;
+// const caclAverage = function (arr) {
+//   let sum = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   return sum / arr.length;
+// };
+
+// console.log(caclAverage(totals));
+
+// Coding Challenge #1
+// Given an array of forecasted maximum temperatures, the thermometer displays a string with the given temperatures. Example: [17, 21, 23] will print "... 17oC in 1 days ... 21oC in 2 days ... 23oC in 3 days ..."
+// Your tasks:
+// 1. Createafunction'printForecast'whichtakesinanarray'arr'andlogsa string like the above to the console. Try it with both test datasets.
+// 2. Usetheproblem-solvingframework:Understandtheproblemandbreakitup into sub-problems!
+// Test data:
+// § Data 1: [17, 21, 23]
+// § Data2:[12,5,-5,0,4]
+// GOOD LUCK 😀
+
+const arr1 = [17, 21, 23];
+const arr2 = [12, 5, -5, 0, 4];
+
+// print each array element with `°C in x days`
+//
+
+const printForecast = function (arr) {
+  let str = "";
+  for (i = 0; i < arr.length; i++) {
+    const days = i + 1;
+    const degrees = arr[i];
+    str = str + `${degrees}°C degrees in ${days} days, `;
   }
-  return sum / arr.length;
+  console.log(str);
 };
-
-console.log(caclAverage(totals));
+printForecast(arr2);
