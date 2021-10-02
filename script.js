@@ -165,37 +165,37 @@
 // 3. LogtotheconsolewhohasthehigherBMI,togetherwiththefullnameandthe respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
 // Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 // 1,2
-const mark = {
-  firstName: "Mark",
-  lastName: "Miller",
-  mass: 78,
-  height: 1.69,
-  calcBMI: function () {
-    this.computedBMI = this.mass / this.height ** 2;
-    return this.computedBMI;
-  },
-};
+// const mark = {
+//   firstName: "Mark",
+//   lastName: "Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.computedBMI = this.mass / this.height ** 2;
+//     return this.computedBMI;
+//   },
+// };
 
-const john = {
-  firstName: "John",
-  lastName: "Smith",
-  mass: 92,
-  height: 1.95,
-  calcBMI: function () {
-    this.computedBMI = this.mass / this.height ** 2;
-    return this.computedBMI;
-  },
-};
+// const john = {
+//   firstName: "John",
+//   lastName: "Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.computedBMI = this.mass / this.height ** 2;
+//     return this.computedBMI;
+//   },
+// };
 
-console.log(mark.calcBMI());
-console.log(mark.computedBMI);
-console.log(john.calcBMI());
-console.log(john.computedBMI);
+// console.log(mark.calcBMI());
+// console.log(mark.computedBMI);
+// console.log(john.calcBMI());
+// console.log(john.computedBMI);
 
-mark.computedBMI > john.computedBMI
-  ? console.log(
-      `${mark.firstName}'s BMI(${mark.computedBMI}) is higher than ${john.firstName}'s (${john.computedBMI}).`
-    )
-  : console.log(
-      `${john.firstName}'s BMI(${john.computedBMI}) is higher than ${mark.firstName}'s (${mark.computedBMI}).`
-    );
+// mark.computedBMI > john.computedBMI
+//   ? console.log(
+//       `${mark.firstName}'s BMI(${mark.computedBMI}) is higher than ${john.firstName}'s (${john.computedBMI}).`
+//     )
+//   : console.log(
+//       `${john.firstName}'s BMI(${john.computedBMI}) is higher than ${mark.firstName}'s (${mark.computedBMI}).`
+//     );
